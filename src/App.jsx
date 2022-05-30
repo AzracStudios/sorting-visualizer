@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   bubbleSortAlgorithm,
   heapSortAlgorithm,
@@ -25,7 +25,7 @@ export default function App() {
     );
   };
 
-  const generateArray = () => {
+  const generateArray = useCallback(() => {
     const arr = [];
 
     for (let i = 0; i < NUMBER_OF_BARS; i++) {
@@ -33,7 +33,7 @@ export default function App() {
     }
 
     setArray(arr);
-  };
+  }, [setArray, NUMBER_OF_BARS])
 
   const heightFromValue = (val) => {
     let asPercent = (val * 100) / 1000;
