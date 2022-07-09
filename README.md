@@ -1,5 +1,7 @@
 # Sorting Visualizer
 
+Link: https://sorting-algorithm-viz.netlify.app
+
 A simple sorting visualizer built using javascript and the React framework.
 
 Bubble sort, Heap sort, Merge sort and Quick sort are the 4 algorithms that are visualized in this app.
